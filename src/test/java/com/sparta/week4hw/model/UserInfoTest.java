@@ -68,6 +68,7 @@ class UserInfoTest {
     }
     @Test
     @DisplayName("닉네임 중복 테스트1") //
+    @Transactional //테스트 코드에서는 역할이 다르다.
     void usernameTest3(){
         //given 주어진 환경을 이야기한다.
         String username = "testId";

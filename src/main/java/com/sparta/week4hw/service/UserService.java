@@ -57,6 +57,8 @@ public class UserService {
         //암호화된 비밀번호는 로그인시 Security에서 비밀번호를 체크할 때 사용된다.
         //Security에서는 클라이언트가 입력한 비밀번호를 다시 복호화하여 DB의 비밀번호를 체크
         password = passwordEncoder.encode(password);
+        password2 = passwordEncoder.encode(password2);
+
         UserInfo user = new UserInfo(username, password, password2);
         userInfoRepository.save(user);
 

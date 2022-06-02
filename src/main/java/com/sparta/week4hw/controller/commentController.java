@@ -43,7 +43,7 @@ public class commentController {
         return "완료";
     }
 
-    //id는 댓글번호
+    //여기의 id는 댓글번호
     @PutMapping("/comment/modify/{id}")
     public Long updateComment(@PathVariable Long id ,@RequestBody CommentRequestDto requestDto){
         commentservice.updateComment(id,requestDto);

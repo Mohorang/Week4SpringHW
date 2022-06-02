@@ -6,6 +6,7 @@ import com.sparta.week4hw.model.Comment;
 import com.sparta.week4hw.repository.commentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.transaction.Transactional;
 
@@ -31,10 +32,5 @@ public class commentService {
                 () -> new IllegalArgumentException("해당 댓글이 존재하지 않습니다.")
         );
         comment.updateComment(requestDto);
-
-    }
-
-    public void deleteComment(){
-
     }
 }
